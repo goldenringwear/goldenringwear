@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GoldenRingWear — Premium Rainwear</title>
+<meta name="description" content="GoldenRingWear premium rainwear for every journey.">
+<style>
+:root{
+  --ink:#07151c;--ink2:#0c222c;--gold:#c9a23a;--gold2:#e8bf4f;
+  --paper:#f7f6f2;--white:#fff;--muted:#68767b;--line:#e4e5e1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+button,input{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.top{height:34px;background:#06151d;color:#dbe2e4;display:flex;align-items:center;justify-content:space-between;padding:0 4%;font-size:10px;letter-spacing:.2px}
+.top strong{color:#f2ca59}.top span{opacity:.35;margin:0 12px}
+.header{height:82px;background:#fff;display:flex;align-items:center;padding:0 4%;gap:28px;position:sticky;top:0;z-index:80;border-bottom:1px solid #e7e8e5}
+.brand{width:215px;font-family:Georgia,serif;font-weight:700;font-size:27px;line-height:.9;color:#10252e}
+.brand i{font-style:normal;color:var(--gold)}.brand small{display:block;font:8px Arial;letter-spacing:4px;text-align:center;color:#778287;margin-top:9px}
+.nav{display:flex;gap:23px;align-items:center;flex:1;font-size:11px;font-weight:800}.nav a{position:relative}.nav a:hover{color:var(--gold)}
+.search{width:205px;height:40px;border:0;border-radius:24px;background:#f3f4f2;display:flex;align-items:center;padding:0 15px;color:#8a9497;font-size:11px}
+.icons{display:flex;align-items:center;gap:16px}.icon{position:relative;border:0;background:none;font-size:20px;color:#17272e}.badge{position:absolute;top:-7px;right:-9px;min-width:15px;height:15px;padding:2px 4px;border-radius:10px;background:var(--gold2);font:bold 8px Arial;text-align:center}
+.hero{min-height:610px;position:relative;overflow:hidden;background:#10252d}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,25,.93) 0%,rgba(5,25,32,.67) 38%,rgba(3,15,20,.18) 70%),url("https://images.unsplash.com/photo-1567955465163-c355df3b74bf?auto=format&fit=crop&w=2000&q=90") center 34%/cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#06151d55,transparent 35%)}
+.hero-content{position:relative;z-index:3;padding:105px 6%;max-width:760px;color:#fff}.mini{font-size:10px;letter-spacing:5px;color:#e7bd50;font-weight:900;margin-bottom:20px}.hero h1{font-family:Arial,sans-serif;font-size:clamp(54px,7vw,94px);line-height:.87;letter-spacing:-5px;font-weight:900}.hero h1 em{font-style:normal;color:#e5b83f}.hero p{max-width:480px;font-size:15px;line-height:1.65;color:#dbe3e5;margin:25px 0 30px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:28px;padding:14px 23px;background:var(--gold2);color:#0a171d;font-size:11px;font-weight:900}.btn.dark{background:#fff;color:#07151c;margin-left:8px}.hero-note{position:absolute;right:5%;bottom:38px;z-index:4;border:1px solid #fff5;background:#07151dcc;backdrop-filter:blur(10px);padding:18px 21px;border-radius:14px;color:#fff;width:190px}.hero-note b{font-size:12px;display:block}.hero-note small{color:#b9c5c8;font-size:9px;display:block;margin-top:5px}.hero-note strong{display:block;color:#efc04d;font:italic 22px Georgia;margin-top:8px}
+.strip{position:relative;z-index:5;margin:-34px 3% 0;background:#fff;border-radius:15px;display:grid;grid-template-columns:repeat(5,1fr);box-shadow:0 18px 50px #06151d18;border:1px solid #ecece9}.strip div{padding:20px 10px;text-align:center;border-right:1px solid var(--line);font-size:11px}.strip div:last-child{border:0}.strip b{display:block}.strip small{display:block;color:#7d898d;font-size:9px;margin-top:4px}
+.section{padding:70px 4%}.head{display:flex;align-items:end;justify-content:space-between;margin-bottom:26px}.eyebrow{font-size:10px;letter-spacing:4px;color:#a07a20;font-weight:900}.head h2{font-size:38px;letter-spacing:-2px;margin-top:6px}.head p{font-size:11px;color:var(--muted);margin-top:7px}.link{font-size:11px;font-weight:900;border-bottom:1px solid #17272e;padding-bottom:5px}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.cat{height:245px;border-radius:16px;overflow:hidden;position:relative;color:#fff;background:#18313b}.cat img{width:100%;height:100%;object-fit:cover;transition:.5s}.cat:hover img{transform:scale(1.06)}.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#06151dcc 0%,transparent 65%)}.cat-info{position:absolute;left:22px;bottom:20px;z-index:2}.cat-info small{font-size:9px;letter-spacing:2px;color:#efc64e;font-weight:900}.cat-info h3{font-size:25px;line-height:1;margin:7px 0}.cat-info a{font-size:10px;font-weight:900}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:#fff;border:1px solid #e6e6e2;border-radius:15px;overflow:hidden;position:relative;transition:.25s}.card:hover{transform:translateY(-6px);box-shadow:0 18px 45px #07151c16}.pic{height:330px;background:#e9edeb;position:relative;overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover;transition:.45s}.card:hover .pic img{transform:scale(1.035)}.tag{position:absolute;top:12px;left:12px;background:#eac24c;color:#172329;padding:6px 10px;border-radius:20px;font-size:8px;font-weight:900;z-index:3}.heart{position:absolute;right:12px;top:12px;width:35px;height:35px;border:0;border-radius:50%;background:#fff;box-shadow:0 5px 16px #0002;z-index:3;font-size:18px}.heart.active{color:#b58a1f}.info{padding:15px}.info h3{font-size:14px;margin-bottom:8px}.price{font-size:16px;font-weight:900}.gst{font-size:9px;color:#899396;font-weight:500}.stars{font-size:10px;color:#e4ad22;margin:7px 0}.stars span{color:#788488;margin-left:4px}.sizes{display:flex;gap:5px;flex-wrap:wrap;margin:9px 0 12px}.sizes span{font-size:9px;border:1px solid #dfe2df;border-radius:5px;padding:5px 7px}.add{width:100%;border:0;border-radius:25px;background:#071a23;color:#fff;padding:11px;font-size:10px;font-weight:900}.add:hover{background:#c99e38;color:#07151c}
+.banner-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:15px}.banner{min-height:300px;border-radius:17px;overflow:hidden;position:relative;color:#fff;background:#123744}.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06151ddc,transparent 80%)}.banner-copy{position:absolute;left:32px;bottom:30px;z-index:2;max-width:430px}.banner-copy h2{font-size:36px;line-height:.95;letter-spacing:-1.5px;margin-bottom:10px}.banner-copy p{font-size:11px;color:#d5dfe1;margin-bottom:17px}.banner:nth-child(2):after{background:linear-gradient(90deg,#3b243dcc,#3b243d55)} 
+.values{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.value{text-align:center;padding:28px 12px;border-right:1px solid var(--line)}.value:last-child{border:0}.value .vicon{font-size:23px}.value b{display:block;font-size:12px;margin:9px 0 4px}.value small{font-size:9px;color:#788489}
+footer{background:#06151d;color:#fff;padding:55px 4% 22px}.footer{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:40px}.flogo{font:700 27px Georgia,serif}.flogo i{font-style:normal;color:#e5bb4b}.footer h3{font-size:12px;margin-bottom:14px}.footer a,.footer p{display:block;color:#aebcc0;font-size:10px;line-height:2}.copyright{border-top:1px solid #fff1;margin-top:35px;padding-top:16px;color:#718287;font-size:9px}
+.drawer-bg,.modal-bg{display:none;position:fixed;inset:0;background:#03131bd9;z-index:200}.drawer-bg.open,.modal-bg.open{display:block}.drawer{position:absolute;right:0;top:0;height:100%;width:min(430px,94vw);background:#fff;padding:24px;overflow:auto}.drawer-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.drawer-head h2{font-size:23px}.close{border:0;background:none;font-size:26px}.cart-item{display:flex;gap:12px;border-bottom:1px solid var(--line);padding:13px 0}.cart-item img{width:65px;height:75px;object-fit:cover;border-radius:8px;background:#eee}.cart-item h4{font-size:12px;margin-bottom:7px}.cart-item p{font-size:11px}.qty{display:flex;gap:7px;align-items:center;margin-top:8px}.qty button{width:25px;height:25px;border:1px solid var(--line);background:#fff;border-radius:5px}.totals{padding-top:18px}.row{display:flex;justify-content:space-between;font-size:12px;margin:9px 0}.row.total{font-size:16px;font-weight:900;border-top:1px solid var(--line);padding-top:13px}.checkout{width:100%;border:0;background:#071a23;color:#fff;padding:13px;border-radius:25px;font-weight:900;margin-top:10px}.empty{padding:50px 0;text-align:center;color:#7c888b;font-size:12px}
+.modal-bg{align-items:center;justify-content:center;padding:20px}.modal{width:min(430px,100%);background:#fff;border-radius:18px;padding:26px;position:relative}.modal h2{font-size:25px}.modal p{font-size:11px;color:var(--muted);margin:7px 0 18px}.modal input{width:100%;padding:13px;border:1px solid var(--line);border-radius:9px;margin-bottom:10px}.modal .submit{width:100%;border:0;background:#071a23;color:#fff;padding:13px;border-radius:9px;font-weight:900}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,80px);background:#071a23;color:#fff;padding:12px 18px;border-radius:25px;font-size:11px;z-index:300;transition:.3s}.toast.show{transform:translate(-50%,0)}
+@media(max-width:950px){.nav{display:none}.search{display:none}.brand{width:auto}.header{gap:14px}.icons{margin-left:auto}.hero-content{padding:80px 6%;max-width:650px}.hero{min-height:560px}.strip{grid-template-columns:repeat(3,1fr)}.strip div:nth-child(n+4){display:none}.cats,.products{grid-template-columns:repeat(2,1fr)}.footer{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.top{display:none}.header{height:66px}.brand{font-size:19px}.brand small{font-size:6px;letter-spacing:2.5px;margin-top:6px}.icons{gap:10px}.hero{min-height:540px}.hero-bg{background-position:60% center}.hero-content{padding:65px 6%;}.hero h1{font-size:56px;letter-spacing:-3px}.hero p{font-size:12px;max-width:310px}.hero-note{display:none}.strip{margin:-18px 3% 0;grid-template-columns:repeat(2,1fr)}.strip div:nth-child(n+3){display:none}.section{padding:48px 4%}.head h2{font-size:29px}.cats,.products{grid-template-columns:1fr 1fr;gap:9px}.cat{height:175px}.cat-info{left:14px;bottom:14px}.cat-info h3{font-size:18px}.pic{height:205px}.info{padding:10px}.info h3{font-size:11px}.price{font-size:13px}.banner-grid{grid-template-columns:1fr}.banner{min-height:240px}.banner-copy{left:20px;bottom:20px}.banner-copy h2{font-size:28px}.values{grid-template-columns:repeat(2,1fr)}.footer{grid-template-columns:1fr 1fr}.footer>div:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div>🚚 <strong>₹29 Delivery on Every Order</strong><span>|</span> Premium Quality <span>|</span> Easy Returns</div>
+  <div>Need Help? <strong>+91 62064 31434</strong><span>|</span> goldenringwear@gmail.com</div>
+</div>
+
+<header class="header">
+  <a class="brand" href="#">Golden<i>Ring</i>Wear<small>STAY DRY · STAY AHEAD</small></a>
+  <nav class="nav">
+    <a href="#">Home</a><a href="#men">Men</a><a href="#women">Women</a><a href="#kids">Kids</a>
+    <a href="#products">Collections</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="search">⌕ &nbsp; Search rainwear...</div>
+  <div class="icons">
+    <button class="icon" onclick="openLogin()" title="Login">♙</button>
+    <button class="icon" onclick="openWishlist()" title="Wishlist">♡<span class="badge" id="wishCount">0</span></button>
+    <button class="icon" onclick="openCart()" title="Cart">🛒<span class="badge" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="mini">MONSOON 2026 · GOLDENRINGWEAR</div>
+    <h1>Weather<br><em>Anything.</em></h1>
+    <p>Premium rainwear built for city commutes, family adventures and unpredictable monsoon days. Protection that looks as good as it feels.</p>
+    <a class="btn" href="#products">Shop Collection →</a>
+    <a class="btn dark" href="#categories">Explore Categories</a>
+  </div>
+  <div class="hero-note"><b>THE NEW RAIN EDIT</b><small>Designed for everyday weather.</small><strong>Stay dry.<br>Stay ahead.</strong></div>
+</section>
+
+<div class="strip">
+  <div>🚚<b>₹29 Delivery</b><small>Every order</small></div>
+  <div>🤲<b>Cash on Delivery</b><small>Available</small></div>
+  <div>▣<b>Secure Payments</b><small>UPI · Cards · Net Banking</small></div>
+  <div>📦<b>Easy Returns</b><small>Hassle free</small></div>
+  <div>♧<b>Dedicated Support</b><small>+91 62064 31434</small></div>
+</div>
+
+<section class="section" id="categories">
+  <div class="head">
+    <div><div class="eyebrow">SHOP BY CATEGORY</div><h2>Rainwear for Everyone</h2><p>Premium protection for every member of the family.</p></div>
+    <a class="link" href="#products">View All →</a>
+  </div>
+  <div class="cats">
+    <div class="cat" id="men"><img src="https://images.unsplash.com/photo-1567955465163-c355df3b74bf?auto=format&fit=crop&w=900&q=85" alt="Men rainwear"><div class="cat-info"><small>01 · MEN</small><h3>Rainwear<br>for Men</h3><a href="#products">Shop Now →</a></div></div>
+    <div class="cat" id="women"><img src="https://images.unsplash.com/photo-1558718932-c6dfc209f6fb?auto=format&fit=crop&w=900&q=85" alt="Women rainwear"><div class="cat-info"><small>02 · WOMEN</small><h3>Rainwear<br>for Women</h3><a href="#products">Shop Now →</a></div></div>
+    <div class="cat" id="kids"><img src="https://images.unsplash.com/photo-1623604407441-c024bd992e63?auto=format&fit=crop&w=900&q=85" alt="Boys rainwear"><div class="cat-info"><small>03 · BOYS</small><h3>Rainwear<br>for Boys</h3><a href="#products">Shop Now →</a></div></div>
+    <div class="cat"><img src="https://images.unsplash.com/photo-1758535291260-d02ee9ae1ceb?auto=format&fit=crop&w=900&q=85" alt="Girls rainwear"><div class="cat-info"><small>04 · GIRLS</small><h3>Rainwear<br>for Girls</h3><a href="#products">Shop Now →</a></div></div>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="head">
+    <div><div class="eyebrow">TRENDING THIS SEASON</div><h2>Our Bestsellers</h2><p>Selected rainwear pieces made for the season.</p></div>
+    <a class="link" href="#products">View All →</a>
+  </div>
+  <div class="products" id="productGrid">
+
+    <article class="card" data-category="Men" data-id="demo1">
+      <div class="pic"><span class="tag">NEW ARRIVAL</span><button class="heart" onclick="toggleWish('demo1',this)">♡</button><img src="https://images.unsplash.com/photo-1611308725032-74f0a551d018?auto=format&fit=crop&w=800&q=85" alt="Storm Pro Rain Jacket"></div>
+      <div class="info"><h3>Storm Pro Rain Suit</h3><div class="price">₹1,299 <span class="gst">+ 5% GST</span></div><div class="stars">★★★★★ <span>4.8 (120)</span></div><div class="sizes"><span>M</span><span>L</span><span>XL</span><span>XXL</span></div><button class="add" onclick="addCart('demo1','Storm Pro Rain Suit',1299,'https://images.unsplash.com/photo-1611308725032-74f0a551d018?auto=format&fit=crop&w=800&q=85')">🛒 Add to Cart</button></div>
+    </article>
+
+    <article class="card" data-category="Women" data-id="demo2">
+      <div class="pic"><span class="tag">BESTSELLER</span><button class="heart" onclick="toggleWish('demo2',this)">♡</button><img src="https://images.unsplash.com/photo-1558718932-c6dfc209f6fb?auto=format&fit=crop&w=800&q=85" alt="Women black raincoat"></div>
+      <div class="info"><h3>Midnight Long Raincoat</h3><div class="price">₹1,199 <span class="gst">+ 5% GST</span></div><div class="stars">★★★★★ <span>4.7 (98)</span></div><div class="sizes"><span>S</span><span>M</span><span>L</span><span>XL</span></div><button class="add" onclick="addCart('demo2','Midnight Long Raincoat',1199,'https://images.unsplash.com/photo-1558718932-c6dfc209f6fb?auto=format&fit=crop&w=800&q=85')">🛒 Add to Cart</button></div>
+    </article>
+
+    <article class="card" data-category="Boys" data-id="demo3">
+      <div class="pic"><span class="tag">KIDS EDIT</span><button class="heart" onclick="toggleWish('demo3',this)">♡</button><img src="https://images.unsplash.com/photo-1623604407441-c024bd992e63?auto=format&fit=crop&w=800&q=85" alt="Kids colorful raincoats"></div>
+      <div class="info"><h3>Adventure Kids Raincoat</h3><div class="price">₹899 <span class="gst">+ 5% GST</span></div><div class="stars">★★★★★ <span>4.8 (76)</span></div><div class="sizes"><span>2Y</span><span>4Y</span><span>6Y</span><span>8Y</span></div><button class="add" onclick="addCart('demo3','Adventure Kids Raincoat',899,'https://images.unsplash.com/photo-1623604407441-c024bd992e63?auto=format&fit=crop&w=800&q=85')">🛒 Add to Cart</button></div>
+    </article>
+
+    <article class="card" data-category="Men" data-id="demo4">
+      <div class="pic"><span class="tag">NEW</span><button class="heart" onclick="toggleWish('demo4',this)">♡</button><img src="https://images.unsplash.com/photo-1567955465163-c355df3b74bf?auto=format&fit=crop&w=800&q=85" alt="Men rainwear"></div>
+      <div class="info"><h3>Trail Rider Rain Jacket</h3><div class="price">₹999 <span class="gst">+ 5% GST</span></div><div class="stars">★★★★★ <span>4.6 (64)</span></div><div class="sizes"><span>M</span><span>L</span><span>XL</span></div><button class="add" onclick="addCart('demo4','Trail Rider Rain Jacket',999,'https://images.unsplash.com/photo-1567955465163-c355df3b74bf?auto=format&fit=crop&w=800&q=85')">🛒 Add to Cart</button></div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="banner-grid">
+    <div class="banner"><img src="https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&w=1400&q=85" onerror="this.style.display='none'" alt=""><div class="banner-copy"><h2>Made for<br>Every Journey.</h2><p>From city streets to mountain trails, stay protected in style.</p><a class="btn" href="#products">Explore Collection →</a></div></div>
+    <div class="banner"><img src="https://images.unsplash.com/photo-1760001868533-ed37253684d8?auto=format&fit=crop&w=900&q=85" alt=""><div class="banner-copy"><h2>Not Just Rainwear.<br>It's Confidence.</h2><p>Modern silhouettes. Monsoon-ready protection.</p><a class="btn" href="#women">Shop Women →</a></div></div>
+  </div>
+</section>
+
+<div class="values">
+  <div class="value"><div class="vicon">◈</div><b>Premium Materials</b><small>Built for long lasting use</small></div>
+  <div class="value"><div class="vicon">◇</div><b>Modern Designs</b><small>Made for everyday style</small></div>
+  <div class="value"><div class="vicon">♡</div><b>Family Friendly</b><small>Rainwear for everyone</small></div>
+  <div class="value"><div class="vicon">♧</div><b>Customer Support</b><small>We're here to help</small></div>
+</div>
+
+<footer id="contact">
+  <div class="footer">
+    <div><div class="flogo">Golden<i>Ring</i>Wear</div><p>STAY DRY · STAY AHEAD</p><p style="margin-top:12px">Premium rainwear for everyday protection, comfort and style.</p></div>
+    <div><h3>SHOP</h3><a href="#men">Men's Rainwear</a><a href="#women">Women's Rainwear</a><a href="#kids">Boys Rainwear</a><a href="#products">Girls Rainwear</a><a href="#products">All Products</a></div>
+    <div><h3>HELP</h3><a href="#about">About Us</a><a href="#contact">Contact</a><a href="#">Shipping</a><a href="#">Returns</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+    <div><h3>CONTACT</h3><p>☎ +91 62064 31434</p><p>✉ goldenringwear@gmail.com</p><p>🚚 ₹29 delivery on every order</p><p>💳 COD + Online Payment</p></div>
+  </div>
+  <div class="copyright">© 2026 GoldenRingWear. All Rights Reserved. · GST 5% applicable · Delivery ₹29 on every order.</div>
+</footer>
+
+<div class="drawer-bg" id="cartBg" onclick="if(event.target===this)closeDrawer()">
+  <aside class="drawer">
+    <div class="drawer-head"><h2>Your Cart</h2><button class="close" onclick="closeDrawer()">×</button></div>
+    <div id="cartItems"></div>
+    <div class="totals" id="cartTotals"></div>
+  </aside>
+</div>
+
+<div class="drawer-bg" id="wishBg" onclick="if(event.target===this)closeWishlist()">
+  <aside class="drawer">
+    <div class="drawer-head"><h2>Your Wishlist</h2><button class="close" onclick="closeWishlist()">×</button></div>
+    <div id="wishItems"></div>
+  </aside>
+</div>
+
+<div class="modal-bg" id="loginBg">
+  <div class="modal">
+    <button class="close" onclick="closeLogin()">×</button>
+    <h2>Welcome back.</h2>
+    <p>Login to keep your wishlist, cart and orders together.</p>
+    <input id="email" type="email" placeholder="Email address">
+    <input id="phone" type="tel" placeholder="Mobile number">
+    <button class="submit" onclick="login()">Continue</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API_URL="https://script.google.com/macros/s/AKfycbyGaVBCEmrBurZGvTGYRiXEu_7uORu7DR0kVylvYjMi-CStHr1GwXc7kCTAel6GLrNhIA/exec";
+let cart=JSON.parse(localStorage.getItem("grw_cart")||"[]");
+let wishlist=JSON.parse(localStorage.getItem("grw_wishlist")||"[]");
+
+function save(){localStorage.setItem("grw_cart",JSON.stringify(cart));localStorage.setItem("grw_wishlist",JSON.stringify(wishlist));counts()}
+function counts(){document.getElementById("cartCount").textContent=cart.reduce((a,x)=>a+x.qty,0);document.getElementById("wishCount").textContent=wishlist.length}
+function toast(t){let e=document.getElementById("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1700)}
+
+function addCart(id,name,price,img){
+  let x=cart.find(p=>p.id===id);
+  if(x)x.qty++;else cart.push({id,name,price,img,qty:1});
+  save();toast("Added to cart ✓");
+}
+function toggleWish(id,btn){
+  let i=wishlist.indexOf(id);
+  if(i>=0){wishlist.splice(i,1);btn.classList.remove("active");btn.textContent="♡";toast("Removed from wishlist")}
+  else{wishlist.push(id);btn.classList.add("active");btn.textContent="♥";toast("Added to wishlist ♡")}
+  save();
+}
+function openCart(){renderCart();document.getElementById("cartBg").classList.add("open")}
+function closeDrawer(){document.getElementById("cartBg").classList.remove("open")}
+function openWishlist(){renderWishlist();document.getElementById("wishBg").classList.add("open")}
+function closeWishlist(){document.getElementById("wishBg").classList.remove("open")}
+function openLogin(){document.getElementById("loginBg").classList.add("open")}
+function closeLogin(){document.getElementById("loginBg").classList.remove("open")}
+function login(){
+  let email=document.getElementById("email").value,phone=document.getElementById("phone").value;
+  if(!email&&!phone)return toast("Enter email or mobile number");
+  localStorage.setItem("grw_user",JSON.stringify({email,phone}));
+  closeLogin();toast("Welcome to GoldenRingWear ✓");
+}
+
+function renderCart(){
+  const box=document.getElementById("cartItems"),tot=document.getElementById("cartTotals");
+  if(!cart.length){box.innerHTML='<div class="empty">Your cart is empty.<br><br>Explore our rainwear collection.</div>';tot.innerHTML="";return}
+  let amount=cart.reduce((a,x)=>a+x.price*x.qty,0),gst=amount*.05,total=amount+gst+29;
+  box.innerHTML=cart.map((x,i)=>`<div class="cart-item"><img src="${x.img||''}" alt=""><div style="flex:1"><h4>${x.name}</h4><p>₹${x.price.toLocaleString("en-IN")}</p><div class="qty"><button onclick="changeQty(${i},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${i},1)">+</button><button onclick="removeCart(${i})" style="margin-left:auto;border:0;background:none">Remove</button></div></div></div>`).join("");
+  tot.innerHTML=`<div class="row"><span>Product total</span><b>₹${amount.toFixed(2)}</b></div><div class="row"><span>GST (5%)</span><b>₹${gst.toFixed(2)}</b></div><div class="row"><span>Delivery</span><b>₹29.00</b></div><div class="row total"><span>Grand Total</span><b>₹${total.toFixed(2)}</b></div><button class="checkout" onclick="toast('Checkout will be connected next ✓')">Proceed to Checkout</button>`;
+}
+function changeQty(i,n){cart[i].qty+=n;if(cart[i].qty<=0)cart.splice(i,1);save();renderCart()}
+function removeCart(i){cart.splice(i,1);save();renderCart()}
+function renderWishlist(){
+  let box=document.getElementById("wishItems");
+  if(!wishlist.length){box.innerHTML='<div class="empty">Your wishlist is empty.<br><br>Tap ♡ on products you love.</div>';return}
+  const names={demo1:["Storm Pro Rain Suit",1299,"https://images.unsplash.com/photo-1611308725032-74f0a551d018?auto=format&fit=crop&w=800&q=85"],demo2:["Midnight Long Raincoat",1199,"https://images.unsplash.com/photo-1558718932-c6dfc209f6fb?auto=format&fit=crop&w=800&q=85"],demo3:["Adventure Kids Raincoat",899,"https://images.unsplash.com/photo-1623604407441-c024bd992e63?auto=format&fit=crop&w=800&q=85"],demo4:["Trail Rider Rain Jacket",999,"https://images.unsplash.com/photo-1567955465163-c355df3b74bf?auto=format&fit=crop&w=800&q=85"]};
+  box.innerHTML=wishlist.map(id=>{let x=names[id];return x?`<div class="cart-item"><img src="${x[2]}"><div><h4>${x[0]}</h4><p>₹${x[1].toLocaleString("en-IN")}</p><button class="add" style="margin-top:8px" onclick="addCart('${id}','${x[0]}',${x[1]},'${x[2]}')">Add to Cart</button></div></div>`:""}).join("");
+}
+
+async function loadProducts(){
+  try{
+    const r=await fetch(API_URL+"?action=products",{cache:"no-store"});
+    const data=await r.json();
+    if(!Array.isArray(data)||!data.length)return;
+    const fallback={
+      Men:"https://images.unsplash.com/photo-1611308725032-74f0a551d018?auto=format&fit=crop&w=800&q=85",
+      Women:"https://images.unsplash.com/photo-1558718932-c6dfc209f6fb?auto=format&fit=crop&w=800&q=85",
+      Boys:"https://images.unsplash.com/photo-1623604407441-c024bd992e63?auto=format&fit=crop&w=800&q=85",
+      Girls:"https://images.unsplash.com/photo-1758535291260-d02ee9ae1ceb?auto=format&fit=crop&w=800&q=85"
+    };
+    const grid=document.getElementById("productGrid");
+    grid.innerHTML=data.map((p)=>{
+      const id=String(p["Product ID"]||"").replace(/'/g,"");
+      const name=String(p["Product Name"]||"Rainwear").replace(/</g,"&lt;");
+      const cat=String(p["Category"]||"Men");
+      const price=Number(p["Sale Price"]||p["Price"]||0);
+      const img=String(p["Image URL"]||fallback[cat]||fallback.Men).replace(/"/g,"&quot;");
+      const sizes=String(p["Sizes"]||"M,L,XL").split(",").map(x=>x.trim()).filter(Boolean).slice(0,5);
+      return `<article class="card" data-category="${cat}" data-id="${id}"><div class="pic"><span class="tag">NEW</span><button class="heart ${wishlist.includes(id)?"active":""}" onclick="toggleWish('${id}',this)">${wishlist.includes(id)?"♥":"♡"}</button><img src="${img}" alt="${name}"></div><div class="info"><h3>${name}</h3><div class="price">₹${price.toLocaleString("en-IN")} <span class="gst">+ 5% GST</span></div><div class="stars">★★★★★ <span>Premium</span></div><div class="sizes">${sizes.map(s=>`<span>${s}</span>`).join("")}</div><button class="add" onclick='addCart(${JSON.stringify(id)},${JSON.stringify(name)},${price},${JSON.stringify(img)})'>🛒 Add to Cart</button></div></article>`;
+    }).join("");
+  }catch(e){console.log("Demo catalogue retained",e)}
+}
+counts();loadProducts();
+</script>
+</body>
+</html>
